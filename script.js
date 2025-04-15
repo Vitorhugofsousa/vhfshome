@@ -71,6 +71,30 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('fade-in');
         observer.observe(section);
     });
+
+    // Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            // Adiciona animação ao ícone do menu
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Fechar o menu quando um link é clicado
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    }
 });
 
 // Função para carregar dashboards
@@ -86,4 +110,4 @@ function loadDashboard(dashboardId) {
             style="width: 100%; height: 600px;"
         ></iframe>
     `;
-} 
+}
