@@ -95,6 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Carregar projetos
+    loadProjects();
 });
 
 // Função para carregar dashboards
@@ -110,4 +113,33 @@ function loadDashboard(dashboardId) {
             style="width: 100%; height: 600px;"
         ></iframe>
     `;
+}
+
+// Função para carregar projetos
+async function loadProjects() {
+    try {
+        const response = await fetch('/source/projects.json');
+        const data = await response.json();
+        const projetosGrid = document.querySelector('.projetos-grid');
+        
+        if (!projetosGrid) return;
+
+        projetosGrid.innerHTML = data.projetos.map(projeto => `
+            <div class="projeto-card">
+                <img class="projeto-imagem" src="${projeto.imagem}" alt="${projeto.titulo}">
+                <h3>${projeto.titulo}</h3>
+                <p>${projeto.descricao}</p>
+                <div class="projeto-links">
+                    <a href="${projeto.github}" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="${projeto.vercel}" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> Ver Projeto
+                    </a>
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Erro ao carregar projetos:', error);
+    }
 }

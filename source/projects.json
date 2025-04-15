@@ -1,0 +1,25 @@
+{
+    "projetos": [
+        {
+            "titulo": "Jogo da Velha em C",
+            "descricao": "Jogo da velha em C através do terminal",
+            "github": "https://github.com/Vitorhugofsousa/C-tic-tac-toe-game",
+            "vercel": "https://github.com/Vitorhugofsousa/C-tic-tac-toe-game",
+            "imagem": "/source/tictactoe.png"
+        },
+        {
+            "titulo": "Task List",
+            "descricao": "Lista de tarefas funcionalcom HTML, CSS e JavaScript",
+            "github": "https://github.com/Vitorhugofsousa/TASKLIST",
+            "vercel": "https://tasklist-opal.vercel.app",
+            "imagem": "/source/tasklist.png"
+        },
+        {
+            "titulo": "Payments",
+            "descricao": "Landing page de pagamento com HTML, CSS e JavaScript",
+            "github": "https://github.com/Vitorhugofsousa/Payments-projeto",
+            "vercel": "https://payments-projeto.vercel.app",
+            "imagem": "/source/payments.png"
+        }
+    ]
+} 
