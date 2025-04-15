@@ -11,20 +11,22 @@
     --text-primary: #ffffff;
     --text-secondary: #b3b3b3;
     --border-color: #333333;
+    --header-background: rgba(0, 0, 0, 0.4);
 }
 
-.light-mode {
+body.dark-mode {
     --primary-color: #ecf0f1;
     --secondary-color: #9370db;
     --accent-color: #8a2be2;
-    --text-color: #2c3e50;
+    --text-color: #000000;
     --background-color: #ffffff;
-    --card-background: #f5f5f5;
+    --card-background: #d1d1d1;
     --bg-primary: #ffffff;
     --bg-secondary: #f5f5f5;
     --text-primary: #333333;
     --text-secondary: #666666;
     --border-color: #e0e0e0;
+    --header-background: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -45,7 +47,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background-color: rgba(18, 18, 18, 0.6);
+    background-color: var(--header-background);
     backdrop-filter: blur(5px);
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--secondary-color);
@@ -62,7 +64,7 @@ nav {
 .logo {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--textd-color);
+    color: var(--text-color);
     text-decoration: none;
     transition: color var(--transition-speed);
 }
