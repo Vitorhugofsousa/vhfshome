@@ -35,9 +35,10 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background-color: var(--primary-color);
+    background-color: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(5px);
     padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 nav {
@@ -49,15 +50,28 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--textd-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.logo:hover {
     color: var(--secondary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .nav-links a {
     color: var(--text-color);
     text-decoration: none;
-    margin: 0 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     transition: color var(--transition-speed);
 }
 
@@ -110,6 +124,44 @@ section {
 .hero-content p {
     font-size: 1.2rem;
     opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
 }
 
 .habilidades {
