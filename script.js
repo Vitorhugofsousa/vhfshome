@@ -126,14 +126,14 @@ async function loadProjects() {
 
         projetosGrid.innerHTML = data.projetos.map(projeto => `
             <div class="projeto-card">
-                <img class="projeto-imagem" src="${projeto.imagem}" alt="${projeto.titulo}">
+                ${projeto.imagem ? `<img src="${projeto.imagem}" alt="${projeto.titulo}" style="width:100%;border-radius:8px;margin-bottom:1rem;">` : ''}
                 <h3>${projeto.titulo}</h3>
                 <p>${projeto.descricao}</p>
                 <div class="projeto-links">
                     <a href="${projeto.github}" target="_blank" class="btn btn-secondary">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                    <a href="${projeto.vercel}" target="_blank" class="btn btn-primary">
+                    <a href="${projeto.vercel.startsWith('http') ? projeto.vercel : 'https://' + projeto.vercel}" target="_blank" class="btn btn-primary">
                         <i class="fas fa-external-link-alt"></i> Ver Projeto
                     </a>
                 </div>
