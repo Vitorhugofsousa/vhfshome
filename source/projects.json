@@ -5,63 +5,63 @@
             "descricao": "Você já está aqui! Este é o meu portfólio pessoal, onde você pode conhecer um pouco sobre mim e meus projetos.",
             "github": "https://github.com/Vitorhugofsousa/vhfshome",
             "vercel": "https://portfoliovhfs.vercel.app/",
-            "imagem": "/source/portfolio.png"
+            "imagem": "/source/img/portfolio.png"
         },
         {
             "titulo": "AutoNotas - Gerenciador de Notas Adesivas",
             "descricao": "Programa desenvolvido para gerenciar notas adesivas personalizadas para windows",
             "github": "https://github.com/Vitorhugofsousa/protasklist",
             "vercel": "https://github.com/Vitorhugofsousa/protasklist/blob/main/dist/Notas%20INSS.exe",
-            "imagem": "/source/autonotas.png"
+            "imagem": "/source/img/autonotas.png"
         },
         {
             "titulo": "Alarme Residencial com RP-2040",
             "descricao": "Alarme residencial personálisável com Raspberry Pi Pico-W (RP2040)",
             "github": "https://github.com/Vitorhugofsousa/EmbeddedProject",
             "vercel": "https://github.com/Vitorhugofsousa/EmbeddedProject",
-            "imagem": "/source/alarmepipico.png"
+            "imagem": "/source/img/alarmepipico.png"
         },
         {
             "titulo": "Controle de Servomotor com RP-2040",
             "descricao": "Controle da movimentação programada de um servomotor com Raspberry Pi Pico-W (RP2040)",
             "github": "https://github.com/Vitorhugofsousa/ServoMotor-Control",
             "vercel": "https://wokwi.com/projects/422536134715918337",
-            "imagem": "/source/servomotor.png"
+            "imagem": "/source/img/servomotor.png"
         },
         {
             "titulo": "Disparo One-Shot com RP-2040",
             "descricao": "Disparo de ações programadas com Raspberry Pi Pico-W (RP2040)",
             "github": "https://github.com/Vitorhugofsousa/One-Shot",
             "vercel": "https://wokwi.com/projects/421589836689892353",
-            "imagem": "/source/oneshot.png"
+            "imagem": "/source/img/oneshot.png"
         },
         {
             "titulo": "Jogo da Velha",
             "descricao": "Jogo da velha através do terminal",
             "github": "https://github.com/Vitorhugofsousa/C-tic-tac-toe-game",
             "vercel": "https://github.com/Vitorhugofsousa/C-tic-tac-toe-game",
-            "imagem": "/source/tictactoe.png"
+            "imagem": "/source/img/tictactoe.png"
         },
         {
             "titulo": "Calculadora em C",
             "descricao": "Calculadora com operações básicas através do terminal",
             "github": "https://github.com/Vitorhugofsousa/C-Simple-Calculator",
             "vercel": "https://github.com/Vitorhugofsousa/C-Simple-Calculator",
-            "imagem": "/source/calculadora.png"
+            "imagem": "/source/img/calculadora.png"
         },
         {
             "titulo": "Task List",
             "descricao": "Lista de tarefas funcional onde você pode adicionar, editar e excluir tarefas",
             "github": "https://github.com/Vitorhugofsousa/TASKLIST",
             "vercel": "https://tasklist-opal.vercel.app",
-            "imagem": "/source/tasklist.png"
+            "imagem": "/source/img/tasklist.png"
         },
         {
             "titulo": "Payments",
             "descricao": "Landing page de uma empresa de pagamentos",
             "github": "https://github.com/Vitorhugofsousa/Payments-projeto",
             "vercel": "https://payments-projeto.vercel.app",
-            "imagem": "/source/payments.png"
+            "imagem": "/source/img/payments.png"
         }
     ]
 } 
