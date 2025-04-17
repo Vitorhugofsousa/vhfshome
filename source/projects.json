@@ -1,6 +1,27 @@
 {
     "projetos": [
         {
+            "titulo": "Disparo One-Shot com RP-2040",
+            "descricao": "Disparo de ações programadas com Raspberry Pi Pico-W (RP2040)",
+            "github": "https://github.com/Vitorhugofsousa/One-Shot",
+            "vercel": "https://wokwi.com/projects/421589836689892353",
+            "imagem": "/source/oneshot.png"
+        },
+        {
+            "titulo": "Alarme Residencial com RP-2040",
+            "descricao": "Alarme residencial personálisável com Raspberry Pi Pico-W (RP2040)",
+            "github": "https://github.com/Vitorhugofsousa/EmbeddedProject",
+            "vercel": "https://github.com/Vitorhugofsousa/EmbeddedProject",
+            "imagem": "/source/alarmepipico.png"
+        },
+        {
+            "titulo": "Controle de Servomotor com RP-2040",
+            "descricao": "Controle da movimentação programada de um servomotor com Raspberry Pi Pico-W (RP2040)",
+            "github": "https://github.com/Vitorhugofsousa/ServoMotor-Control",
+            "vercel": "https://wokwi.com/projects/422536134715918337",
+            "imagem": "/source/servomotor.png"
+        },
+        {
             "titulo": "Jogo da Velha em C",
             "descricao": "Jogo da velha em C através do terminal",
             "github": "https://github.com/Vitorhugofsousa/C-tic-tac-toe-game",
