@@ -56,9 +56,22 @@
                 <p>Transformando dados em insights valiosos e visualizações interativas.</p>
                 <div class="hero-buttons">
                     <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-                    <a href="/source/cv/Vitor_Hugo_F_Sousa_CV.pdf" class="btn btn-secondary" download>Download CV</a>
+                    <button id="open-cv-modal" class="btn btn-secondary">Visualizar Currículo</button>
                 </div>
             </div>
+            <!-- Modal para seleção de download do CV -->
+            <div id="cv-modal" class="modal" style="display:none;">
+                <div class="modal-content">
+        <div class="closer">
+            <span class="close-modal" id="close-cv-modal">X</span>
+        </div>
+        <h2>Selecione o Idioma do Currículo</h2>
+        <div class="modal-buttons">
+            <a href="https://drive.google.com/file/d/14-seeSUNnWrNRQqza63CEdOhgeVhBYKA/view?usp=drive_link" class="btn btn-primary" target="_blank" download>Português</a>
+            <a href="https://drive.google.com/file/d/18VeMvQ-Hd34grzaRxI7e-hIrq4e9jN4y/view?usp=sharing" class="btn btn-primary" target="_blank" download>Inglês</a>
+        </div>
+    </div>
+</div>
         </section>
 
         <section id="sobre" class="sobre">

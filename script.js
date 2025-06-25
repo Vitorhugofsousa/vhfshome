@@ -98,6 +98,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Carregar projetos
     loadProjects();
+
+    // Modal de seleção de download do CV
+    const openCvModalBtn = document.getElementById('open-cv-modal');
+    const cvModal = document.getElementById('cv-modal');
+    const closeCvModalBtn = document.getElementById('close-cv-modal');
+
+    if (openCvModalBtn && cvModal && closeCvModalBtn) {
+        openCvModalBtn.addEventListener('click', () => {
+            cvModal.style.display = 'flex';
+        });
+        closeCvModalBtn.addEventListener('click', () => {
+            cvModal.style.display = 'none';
+        });
+        // Fechar ao clicar fora do modal
+        window.addEventListener('click', (e) => {
+            if (e.target === cvModal) {
+                cvModal.style.display = 'none';
+            }
+        });
+    }
 });
 
 // Função para carregar dashboards
