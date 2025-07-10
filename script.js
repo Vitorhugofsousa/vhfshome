@@ -149,6 +149,11 @@ async function loadProjects() {
                 ${projeto.imagem ? `<img src="${projeto.imagem}" alt="${projeto.titulo}" style="width:100%;border-radius:8px;margin-bottom:1rem;">` : ''}
                 <h3>${projeto.titulo}</h3>
                 <p>${projeto.descricao}</p>
+                <div class="projeto-linguagens">
+                    ${projeto.linguagens ? projeto.linguagens.map(lang => `
+                        <span class="linguagem-tag">${lang}</span>
+                    `).join('') : ''}
+                </div>
                 <div class="projeto-links">
                     <a href="${projeto.github}" target="_blank" class="btn btn-secondary">
                         <i class="fab fa-github"></i> GitHub

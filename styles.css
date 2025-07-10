@@ -487,6 +487,24 @@ footer {
     object-fit: cover;
 }
 
+.projeto-linguagens {
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7%;
+  }
+  .linguagem-tag {
+    border: 1px solid #a259f7;
+    color: #a259f7;
+    border-radius: 999px;
+    padding: 0.2em 0.9em;
+    font-size: 0.85em;
+    font-weight: 600;
+    background: transparent;
+    display: inline-block;
+    margin: 10px 0px;
+  }
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
