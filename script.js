@@ -140,31 +140,99 @@ async function loadProjects() {
     try {
         const response = await fetch('/source/projects.json');
         const data = await response.json();
-        const projetosGrid = document.querySelector('.projetos-grid');
+        const container = document.querySelector('.projetos-container');
         
-        if (!projetosGrid) return;
+        if (!container) return;
 
-        projetosGrid.innerHTML = data.projetos.map(projeto => `
-            <div class="projeto-card">
-                ${projeto.imagem ? `<img src="${projeto.imagem}" alt="${projeto.titulo}" style="width:100%;border-radius:8px;margin-bottom:1rem;">` : ''}
-                <h3>${projeto.titulo}</h3>
-                <p>${projeto.descricao}</p>
-                <div class="projeto-linguagens">
-                    ${projeto.linguagens ? projeto.linguagens.map(lang => `
-                        <span class="linguagem-tag">${lang}</span>
-                    `).join('') : ''}
+        const categories = {
+            "Engineering & Science": [],
+            "Dashboards & Analytics": [], 
+            "Web & Others": []
+        }
+
+        // Agrupa os projetos baseados no atributo "categoria" do seu JSON
+        data.projetos.forEach(projeto => {
+            const cat = projeto.categoria;
+            if (cat === "Engineering & Science") {
+                categories["Engineering & Science"].push(projeto);
+            } else if (cat === "Dashboards & analytics" || cat === "Data & Analytics" || cat === "Dashboards & Analytics") {
+                categories["Dashboards & Analytics"].push(projeto);
+            } else {
+                categories["Web & Others"].push(projeto);
+            }
+        });
+
+        container.innerHTML = Object.keys(categories).map(categoria => {
+            const projetos = categories[categoria];
+            if (projetos.length === 0) return ''; // Pula categorias sem projetos
+
+            // Cria um ID único e limpo para o toggle
+            const catId = categoria.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+
+            return `
+                <div class="projeto-category-toggle">
+                    <button class="toggle-btn" onclick="toggleCategory('${catId}')">
+                        ${categoria} <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="toggle-content active" id="${catId}">
+                        <div class="carousel-wrapper">
+                            <button class="carousel-btn prev" onclick="moveCarousel('${catId}', -1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="carousel-track" id="track-${catId}">
+                                ${projetos.map(projeto => `
+                                    <div class="projeto-card">
+                                        ${projeto.imagem ? `<img src="${projeto.imagem}" alt="${projeto.titulo}" class="projeto-imagem" style="width:100%;border-radius:8px;margin-bottom:1rem;">` : ''}
+                                        <h3>${projeto.titulo}</h3>
+                                        <p>${projeto.descricao}</p>
+                                        <div class="projeto-linguagens">
+                                            ${projeto.linguagens ? projeto.linguagens.map(lang => `
+                                                <span class="linguagem-tag">${lang}</span>
+                                            `).join('') : ''}
+                                        </div>
+                                        <div class="projeto-links">
+                                            <a href="${projeto.github}" target="_blank" class="btn btn-secondary">
+                                                <i class="fab fa-github"></i> GitHub
+                                            </a>
+                                            <a href="${projeto.vercel.startsWith('http') ? projeto.vercel : 'https://' + projeto.vercel}" target="_blank" class="btn btn-primary">
+                                                <i class="fas fa-external-link-alt"></i> Ver Projeto
+                                            </a>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <button class="carousel-btn next" onclick="moveCarousel('${catId}', 1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="projeto-links">
-                    <a href="${projeto.github}" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="${projeto.vercel.startsWith('http') ? projeto.vercel : 'https://' + projeto.vercel}" target="_blank" class="btn btn-primary">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto
-                    </a>
-                </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
     } catch (error) {
         console.error('Erro ao carregar projetos:', error);
     }
 }
+
+// Funções para controlar o abre/fecha e o carrossel (devem ficar no escopo global)
+window.toggleCategory = function(id) {
+    const content = document.getElementById(id);
+    const icon = content.previousElementSibling.querySelector('i');
+    content.classList.toggle('active');
+    
+    if(content.classList.contains('active')) {
+        icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+    } else {
+        icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+    }
+};
+
+window.moveCarousel = function(id, direction) {
+    const track = document.getElementById(`track-${id}`);
+    const card = track.querySelector('.projeto-card');
+    if (card) {
+        // Move o tamanho do card + o gap (32px = 2rem)
+        const scrollAmount = card.offsetWidth + 32; 
+        track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+};

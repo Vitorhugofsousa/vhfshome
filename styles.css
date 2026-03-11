@@ -119,7 +119,7 @@ main {
 
 section {
     padding: 4rem 2rem;
-    max-width: 1200px;
+    max-width: 75%;
     margin: 0 auto;
 }
 
@@ -241,7 +241,7 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -505,6 +505,158 @@ footer {
     margin: 10px 0px;
   }
 
+/* Estilos para a seção de projetos */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.projeto-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 300px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.projeto-card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.projeto-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.projeto-links .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.projeto-links .btn i {
+    margin-right: 0.5rem;
+} 
+
+/* Layout Principal das Categorias */
+#projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estilos do Toggle (Sanfona) */
+.projeto-category-toggle {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: var(--card-background) 2px solid;
+    margin: 5px;
+}
+
+.toggle-btn {
+    width: 100%;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color var(--transition-speed);
+}
+
+.toggle-btn:hover {
+    background-color: rgba(138, 43, 226, 0.1); /* Efeito sutil ao passar o mouse */
+}
+
+.toggle-content {
+    display: none;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.toggle-content.active {
+    display: block;
+}
+
+/* Estilos do Carrossel */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2.5%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    scrollbar-width: none; /* Firefox */
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* Garante que os cards do projeto mantenham sua forma no carrossel */
+.carousel-track{
+    min-width: 350px; /* Impede o card de ser esmagado */
+    flex: 0 0 auto; 
+}
+
+/* Botões do Carrossel */
+.carousel-btn {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5%;
+    width: 30px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: background-color var(--transition-speed), transform 0.2s;
+    margin: 0.5%;
+}
+
+.carousel-btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: -20px;
+}
+
+.carousel-btn.next {
+    right: -20px;
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -522,6 +674,10 @@ footer {
         transition: all 0.3s ease-in-out;
         z-index: 999;
         border-top: 1px solid var(--secondary-color);
+    }
+
+    section{
+        max-width: 85%;
     }
 
     body.dark-mode .nav-links {
@@ -578,50 +734,15 @@ footer {
     .timeline-container {
         grid-template-columns: 1fr;
     }
-} 
 
-/* Estilos para a seção de projetos */
-.projetos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.projeto-card {
-    background-color: var(--card-background);
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.projeto-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
-}
-
-.projeto-card h3 {
-    color: var(--text-color);
-    margin-bottom: 1rem;
-}
-
-.projeto-card p {
-    color: var(--text-color);
-    margin-bottom: 1.5rem;
-}
-
-.projeto-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-start;
-}
-
-.projeto-links .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-}
-
-.projeto-links .btn i {
-    margin-right: 0.5rem;
+    .carousel-btn {
+        display: none; /* Oculta as setas no celular para o usuário rolar com o dedo */
+    }
+    .carousel-track  {
+        min-width: 280px;
+    }
+    .projeto-card {
+        max-width: 250px;
+    
+    }
 } 

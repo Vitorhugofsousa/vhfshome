@@ -1,12 +1,31 @@
 {
     "projetos": [
         {
+            "titulo": "Dashboard Distribuição de Medicamentos",
+            "descricao": "Neste projeto eu apliquei técnicas de visualização de dados para monitorar a distribuição de medicamentos.",
+            "github": "https://github.com/Vitorhugofsousa",
+            "vercel": "https://github.com/Vitorhugofsousa",
+            "imagem": "/source/img/portfolio.png",
+            "linguagens": ["Python", "SQL", "Excel", "DAX", "Power BI"],
+            "categoria": "Dashboards & Analytics"
+        },
+        {
+            "titulo": "ETL API Clima",
+            "descricao": "Neste projeto eu apliquei técnicas de ETL para tratar e normalizar dados de clima utilizando Apache Airflow.",
+            "github": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
+            "vercel": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
+            "imagem": "/source/img/portfolio.png",
+            "linguagens": ["Python", "SQL", "Docker", "Airflow", "Git"],
+            "categoria": "Engineering & Science"
+        },
+        {
             "titulo": "Meu Portfólio Pessoal",
             "descricao": "Você já está aqui! Este é o meu portfólio pessoal, onde você pode conhecer um pouco sobre mim e meus projetos.",
             "github": "https://github.com/Vitorhugofsousa/vhfshome",
             "vercel": "https://portfoliovhfs.vercel.app/",
             "imagem": "/source/img/portfolio.png",
-            "linguagens": ["HTML", "CSS", "JavaScript"]
+            "linguagens": ["HTML", "CSS", "JavaScript"],
+            "categoria": "Web & Others"
         },
         {
             "titulo": "AutoNotas - Gerenciador de Notas Adesivas",
@@ -14,7 +33,8 @@
             "github": "https://github.com/Vitorhugofsousa/protasklist",
             "vercel": "https://github.com/Vitorhugofsousa/protasklist/blob/main/dist/Notas%20INSS.exe",
             "imagem": "/source/img/autonotas.png",
-            "linguagens": ["Python", "TeX", "HTML"]
+            "linguagens": ["Python", "TeX", "HTML"],
+            "categoria": "Web & Others"
         },
         {
             "titulo": "SINGED",
@@ -22,31 +42,8 @@
             "github": "https://github.com/Vitorhugofsousa/S.I.N.G.E.D_INSS",
             "vercel": "https://github.com/Vitorhugofsousa/S.I.N.G.E.D_INSS",
             "imagem": "/source/img/singed.png",
-            "linguagens": ["Python", "SQL", "JavaScript", "HTML", "CSS"]
-        },
-        {
-            "titulo": "Alarme Residencial com RP-2040",
-            "descricao": "Alarme residencial personálisável com Raspberry Pi Pico-W (RP2040)",
-            "github": "https://github.com/Vitorhugofsousa/EmbeddedProject",
-            "vercel": "https://github.com/Vitorhugofsousa/EmbeddedProject",
-            "imagem": "/source/img/alarmepipico.png",
-            "linguagens": ["C", "C++", "CMake"]
-        },
-        {
-            "titulo": "Controle de Servomotor com RP-2040",
-            "descricao": "Controle da movimentação programada de um servomotor com Raspberry Pi Pico-W (RP2040)",
-            "github": "https://github.com/Vitorhugofsousa/ServoMotor-Control",
-            "vercel": "https://wokwi.com/projects/422536134715918337",
-            "imagem": "/source/img/servomotor.png",
-            "linguagens": ["C", "C++", "CMake"]
-        },
-        {
-            "titulo": "Disparo One-Shot com RP-2040",
-            "descricao": "Disparo de ações programadas com Raspberry Pi Pico-W (RP2040)",
-            "github": "https://github.com/Vitorhugofsousa/One-Shot",
-            "vercel": "https://wokwi.com/projects/421589836689892353",
-            "imagem": "/source/img/oneshot.png",
-            "linguagens": ["C", "C++", "CMake"]
+            "linguagens": ["Python", "SQL", "JavaScript", "HTML", "CSS"],
+            "categoria": "Web & Others"
         },
         {
             "titulo": "Task List",
@@ -54,7 +51,8 @@
             "github": "https://github.com/Vitorhugofsousa/TASKLIST",
             "vercel": "https://tasklist-opal.vercel.app",
             "imagem": "/source/img/tasklist.png",
-            "linguagens": ["JavaScript", "HTML", "CSS"]
+            "linguagens": ["JavaScript", "HTML", "CSS"],
+            "categoria": "Web & Others"
         },
         {
             "titulo": "Payments",
@@ -62,7 +60,35 @@
             "github": "https://github.com/Vitorhugofsousa/Payments-projeto",
             "vercel": "https://payments-projeto.vercel.app",
             "imagem": "/source/img/payments.png",
-            "linguagens": ["JavaScript", "HTML", "CSS"]
+            "linguagens": ["JavaScript", "HTML", "CSS"],
+            "categoria": "Web & Others"
+        },
+        {
+            "titulo": "Alarme Residencial com RP-2040",
+            "descricao": "Alarme residencial personálisável com Raspberry Pi Pico-W (RP2040)",
+            "github": "https://github.com/Vitorhugofsousa/EmbeddedProject",
+            "vercel": "https://github.com/Vitorhugofsousa/EmbeddedProject",
+            "imagem": "/source/img/alarmepipico.png",
+            "linguagens": ["C", "C++", "CMake"],
+            "categoria": "Web & Others"
+        },
+        {
+            "titulo": "Controle de Servomotor com RP-2040",
+            "descricao": "Controle da movimentação programada de um servomotor com Raspberry Pi Pico-W (RP2040)",
+            "github": "https://github.com/Vitorhugofsousa/ServoMotor-Control",
+            "vercel": "https://wokwi.com/projects/422536134715918337",
+            "imagem": "/source/img/servomotor.png",
+            "linguagens": ["C", "C++", "CMake"],
+            "categoria": "Web & Others"
+        },
+        {
+            "titulo": "Disparo One-Shot com RP-2040",
+            "descricao": "Disparo de ações programadas com Raspberry Pi Pico-W (RP2040)",
+            "github": "https://github.com/Vitorhugofsousa/One-Shot",
+            "vercel": "https://wokwi.com/projects/421589836689892353",
+            "imagem": "/source/img/oneshot.png",
+            "linguagens": ["C", "C++", "CMake"],
+            "categoria": "Web & Others"
         }
     ]
-} 
+}
