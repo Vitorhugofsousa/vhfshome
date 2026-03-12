@@ -96,8 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Carregar projetos
+    // Carregar projetos e habilidades
     loadProjects();
+    loadSkills();
 
     // Modal de seleção de download do CV
     const openCvModalBtn = document.getElementById('open-cv-modal');
@@ -120,19 +121,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Função para carregar dashboards
-function loadDashboard(dashboardId) {
-    const container = document.querySelector('.dashboard-container');
-    // Aqui você pode implementar a lógica para carregar diferentes dashboards
-    // Por exemplo, usando iframes para Power BI ou Tableau
-    container.innerHTML = `
-        <iframe 
-            src="SEU_DASHBOARD_URL" 
-            frameborder="0" 
-            allowFullScreen="true"
-            style="width: 100%; height: 600px;"
-        ></iframe>
-    `;
+// Função para carregar habilidades
+async function loadSkills() {
+    try {
+        const response = await fetch('/source/habilidades.json');
+        const data = await response.json();
+        const container = document.getElementById('habilidades-container');
+        
+        if (!container) return;
+
+        container.innerHTML = data.habilidades.map(skill => `
+            <div class="skill-card">
+                ${skill.icone}
+                <h3>${skill.nome}</h3>
+                <p>${skill.descricao}</p>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Erro ao carregar habilidades:', error);
+    }
 }
 
 // Função para carregar projetos
