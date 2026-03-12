@@ -162,19 +162,23 @@ async function loadProjects() {
             }
         });
 
-        container.innerHTML = Object.keys(categories).map(categoria => {
+        container.innerHTML = Object.keys(categories).map((categoria, index) => {
             const projetos = categories[categoria];
             if (projetos.length === 0) return ''; // Pula categorias sem projetos
 
             // Cria um ID único e limpo para o toggle
             const catId = categoria.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+            
+            // Verifica se é a primeira categoria (index 0) para deixá-la aberta e com o ícone correto
+            const isActiveClass = index === 0 ? 'active' : '';
+            const iconClass = index === 0 ? 'fa-chevron-up' : 'fa-chevron-down';
 
             return `
                 <div class="projeto-category-toggle">
                     <button class="toggle-btn" onclick="toggleCategory('${catId}')">
-                        ${categoria} <i class="fas fa-chevron-down"></i>
+                        ${categoria} <i class="fas ${iconClass}"></i>
                     </button>
-                    <div class="toggle-content active" id="${catId}">
+                    <div class="toggle-content ${isActiveClass}" id="${catId}">
                         <div class="carousel-wrapper">
                             <button class="carousel-btn prev" onclick="moveCarousel('${catId}', -1)">
                                 <i class="fas fa-chevron-left"></i>
