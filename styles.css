@@ -133,46 +133,20 @@ section {
     gap: 10px;
 }
 
-.modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%; 
-}
-
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    background-color: var(--background-color);
-    border: #8a2be2 2px solid;
-    border-radius: 2%;
-    padding: 2%;
-    gap: 20px;
-    
-}
-
-.closer{
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    width: 100%;
-}
-
-.close-modal {
-    font-size: larger;
+/* Estilo do botão de idioma */
+.lang-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
     cursor: pointer;
-    align-items: end;
-   
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color var(--transition-speed);
+    padding: 0.5rem;
 }
 
-.modal-buttons{
-    display: flex;
-    gap: 20%;
+.lang-toggle:hover {
+    color: var(--secondary-color);
 }
 
 .hero-content h1 {
@@ -703,13 +677,6 @@ footer {
         color: var(--text-color);
     }
 
-    .modal-content{
-        width: 80%;
-    }
-
-    .modal-buttons{
-        gap: 10%;
-    }
     
     .skills-grid {
         gap: none;

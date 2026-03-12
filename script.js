@@ -1,4 +1,68 @@
+const cvUrls = {
+    pt: "https://drive.google.com/file/d/14-seeSUNnWrNRQqza63CEdOhgeVhBYKA/view?usp=drive_link",
+    en: "https://drive.google.com/file/d/18VeMvQ-Hd34grzaRxI7e-hIrq4e9jN4y/view?usp=sharing"
+};
+
+// Dicionário básico de traduções (você pode expandir isso depois para o site todo)
+const translations = {
+    pt: {
+        cvButton: "Visualizar Currículo",
+        heroDesc: "Transformando dados em insights valiosos."
+    },
+    en: {
+        cvButton: "View Resume",
+        heroDesc: "Transforming data into valuable insights."
+    }
+};
+
+let currentLang = 'pt'; // Idioma padrão
+
+// Função para aplicar o idioma
+function applyLanguage(lang) {
+    currentLang = lang;
+    
+    // 1. Atualiza o link e o texto do botão do currículo
+    const cvLink = document.getElementById('cv-link');
+    if (cvLink) {
+        cvLink.href = cvUrls[lang];
+        cvLink.textContent = translations[lang].cvButton;
+    }
+
+    // 2. Atualiza outros textos da página (exemplo no Hero)
+    const heroDesc = document.getElementById('hero-desc');
+    if (heroDesc) {
+        heroDesc.textContent = translations[lang].heroDesc;
+    }
+
+    // 3. Atualiza o texto do botão de toggle no navbar (mostra a opção OPOSTA)
+    const langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+        langToggle.textContent = lang === 'pt' ? 'EN' : 'PT';
+    }
+    
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Lógica de Idioma ---
+    
+    // Detectar idioma do navegador do usuário
+    const browserLang = navigator.language || navigator.userLanguage;
+    // Se começar com 'pt' (ex: pt-BR, pt-PT), usa pt. Caso contrário, usa en.
+    const initialLang = browserLang.toLowerCase().startsWith('pt') ? 'pt' : 'en';
+    
+    // Aplica o idioma inicial
+    applyLanguage(initialLang);
+
+    // Listener para o botão de trocar idioma
+    const langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const newLang = currentLang === 'pt' ? 'en' : 'pt';
+            applyLanguage(newLang);
+        });
+    }
+
     // Gerenciamento do tema
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
@@ -100,25 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
     loadSkills();
 
-    // Modal de seleção de download do CV
-    const openCvModalBtn = document.getElementById('open-cv-modal');
-    const cvModal = document.getElementById('cv-modal');
-    const closeCvModalBtn = document.getElementById('close-cv-modal');
 
-    if (openCvModalBtn && cvModal && closeCvModalBtn) {
-        openCvModalBtn.addEventListener('click', () => {
-            cvModal.style.display = 'flex';
-        });
-        closeCvModalBtn.addEventListener('click', () => {
-            cvModal.style.display = 'none';
-        });
-        // Fechar ao clicar fora do modal
-        window.addEventListener('click', (e) => {
-            if (e.target === cvModal) {
-                cvModal.style.display = 'none';
-            }
-        });
-    }
+
 });
 
 // Função para carregar habilidades
