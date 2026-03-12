@@ -518,6 +518,7 @@ footer {
     border-radius: 10px;
     padding: 1.5rem;
     max-width: 300px;
+    max-height: auto;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
@@ -566,7 +567,7 @@ footer {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: var(--card-background) 2px solid;
-    margin: 5px;
+    margin: 7px;
 }
 
 .toggle-btn {
@@ -603,7 +604,10 @@ footer {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 2.5%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    padding-top: none;
+    padding-bottom: none;
 }
 
 .carousel-track {
@@ -620,10 +624,12 @@ footer {
 }
 
 /* Garante que os cards do projeto mantenham sua forma no carrossel */
-.carousel-track{
-    min-width: 350px; /* Impede o card de ser esmagado */
+.carousel-track .projeto-card {
+    min-width: 280px; /* Impede o card de ser esmagado */
     flex: 0 0 auto; 
 }
+
+
 
 /* Botões do Carrossel */
 .carousel-btn {
