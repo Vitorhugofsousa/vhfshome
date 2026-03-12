@@ -713,7 +713,7 @@ footer {
     
     .skills-grid {
         gap: none;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+        grid-template-columns: repeat(auto-fit, minmax(140px, 2fr));
     }
 
     .skill-card {
