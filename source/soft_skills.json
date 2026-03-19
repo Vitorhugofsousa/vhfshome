@@ -1,0 +1,34 @@
+{
+    "softskills": [
+      {
+        "nome": "Pensamento Crítico",
+        "descricao": "Análise de problemas complexos com base em evidências",
+        "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/idea.png\" alt=\"pensamento-critico\"/>"
+      },
+      {
+        "nome": "Resolução de Problemas",
+        "descricao": "Soluções orientadas a dados para desafios técnicos",
+        "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/?size=100&id=OrDsjdtZnvUU&format=png&color=000000\" alt=\"resolucao-problemas\"/>"
+      },
+      {
+        "nome": "Data Storytelling",
+        "descricao": "Comunicação clara de insights para públicos técnicos e não técnicos",
+        "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/combo-chart--v1.png\" alt=\"storytelling\"/>"
+      },
+      {
+        "nome": "Gestão de Prazos",
+        "descricao": "Entrega consistente de demandas dentro do prazo",
+        "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/deadline.png\" alt=\"gestao-prazos\"/>"
+      },
+      {
+        "nome": "Colaboração",
+        "descricao": "Trabalho eficaz em times multidisciplinares e ágeis",
+        "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/conference-call.png\" alt=\"colaboracao\"/>"
+      },
+      {
+        "nome": "Comunicação Técnica",
+        "descricao": "Tradução de demandas de negócio em soluções de dados",
+        "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/communication.png\" alt=\"comunicacao\"/>"
+      }
+    ]
+  }

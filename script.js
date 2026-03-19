@@ -7,11 +7,9 @@ const cvUrls = {
 const translations = {
     pt: {
         cvButton: "Visualizar Currículo",
-        heroDesc: "Transformando dados em insights valiosos."
     },
     en: {
         cvButton: "View Resume",
-        heroDesc: "Transforming data into valuable insights."
     }
 };
 
@@ -163,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carregar projetos e habilidades
     loadProjects();
     loadSkills();
-
+    loadSoftSkills();
 
 
 });
@@ -186,6 +184,27 @@ async function loadSkills() {
         `).join('');
     } catch (error) {
         console.error('Erro ao carregar habilidades:', error);
+    }
+}
+
+//função para chamar soft skills
+async function loadSoftSkills() {
+    try {
+        const response = await fetch('/source/soft_skills.json');
+        const data = await response.json();
+        const container = document.getElementById('softskills-container');
+
+        if (!container) return;
+
+        container.innerHTML = data.softskills.map(skill => `
+            <div class="skill-card">
+                ${skill.icone}
+                <h3>${skill.nome}</h3>
+                <p>${skill.descricao}</p>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Erro ao carregar soft skills:', error);
     }
 }
 
