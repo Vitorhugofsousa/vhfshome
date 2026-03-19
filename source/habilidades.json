@@ -11,6 +11,11 @@
             "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/fluency/48/sql.png\" alt=\"sql\"/>"
         },
         {
+            "nome": "Apache Spark",
+            "descricao": "Processamento unificado e distribuído de Big Data",
+            "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/?size=100&id=0cRqPqlItA0E&format=png&color=000000\" alt=\"sql\"/>"
+        },
+        {
             "nome": "C",
             "descricao": "Programação de baixo nível e otimização",
             "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/c-programming.png\" alt=\"c-programming\"/>"
@@ -19,6 +24,16 @@
             "nome": "JavaScript",
             "descricao": "Desenvolvimento web e visualizações interativas",
             "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/javascript--v1.png\" alt=\"javascript--v1\"/>"
+        },
+        {
+            "nome": "Git",
+            "descricao": "Versionamento de Código",
+            "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/?size=100&id=20906&format=png&color=000000\" alt=\"javascript--v1\"/>"
+        },
+        {
+            "nome": "DAX",
+            "descricao": "Expressões de Análise de Dados",
+            "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/power-bi-2021.png\" alt=\"power-bi-2021\"/>"
         },
         {
             "nome": "Power BI",
@@ -34,6 +49,31 @@
             "nome": "Excel",
             "descricao": "Análise de dados e modelagem financeira",
             "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/microsoft-excel-2019--v1.png\" alt=\"microsoft-excel-2019--v1\"/>"
+        },
+        {
+            "nome": "Docker",
+            "descricao": "Containerização de código",
+            "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000\" alt=\"microsoft-excel-2019--v1\"/>"
+        },
+        {
+            "nome": "Apache Airflow",
+            "descricao": "Orquestração de Dados",
+            "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/microsoft-excel-2019--v1.png\" alt=\"microsoft-excel-2019--v1\"/>"
+        },
+        {
+            "nome": "Fabric",
+            "descricao": "Python notebook e visualizações interativas e colaborativas",
+            "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/google-colab.png\" alt=\"google-colab\"/>"
+        },
+        {
+            "nome": "Databricks",
+            "descricao": "Python notebook e visualizações interativas e colaborativas",
+            "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/color/48/google-colab.png\" alt=\"google-colab\"/>"
+        },
+        {
+            "nome": "Azure",
+            "descricao": "Infraestrura e Armazenamento de Dados em Nuvem",
+            "icone": "<img width=\"35\" height=\"35\" src=\"https://img.icons8.com/?size=100&id=VLKafOkk3sBX&format=png&color=000000\" alt=\"google-colab\"/>"
         },
         {
             "nome": "Colaboratory",
