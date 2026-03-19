@@ -1,6 +1,29 @@
 {
     "projetos": [
         {
+            "titulo": "ETL Weather API",
+            "descricao": "Neste projeto eu apliquei técnicas de ETL para tratar e normalizar dados de clima.",
+            "github": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
+            "vercel": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
+            "imagem": "/source/img/weather_project.png",
+            "linguagens": ["Python", "ETL", "Docker", "Airflow", "Terraform", "Git", "Parquet"],
+            "categoria": "Engineering & Science"
+        },
+        {
+            "titulo": "XML Data Mining",
+            "descricao": "Nesse projeto desenvolvi um script Python que extrai informações relevantes de arquivos XML de Notas Fiscais Eletrônicas e as salva em uma planilha de forma automatizada.",
+            "github": "https://github.com/Vitorhugofsousa/xml-extraction",
+            "vercel": "https://github.com/Vitorhugofsousa/xml-extraction",
+            "imagem": "/source/img/weather_project.png",
+            "linguagens": ["Python", "Excel", "Git"],
+            "categoria": "Engineering & Science"
+        },
+
+
+
+
+        
+        {
             "titulo": "Dashboard Distribuição de Medicamentos",
             "descricao": "Neste projeto eu apliquei técnicas de visualização de dados para monitorar a distribuição de medicamentos.",
             "github": "https://github.com/Vitorhugofsousa",
@@ -9,15 +32,11 @@
             "linguagens": ["Python", "SQL", "Excel", "DAX", "Power BI"],
             "categoria": "Dashboards & Analytics"
         },
-        {
-            "titulo": "ETL API Clima",
-            "descricao": "Neste projeto eu apliquei técnicas de ETL para tratar e normalizar dados de clima utilizando Apache Airflow.",
-            "github": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
-            "vercel": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
-            "imagem": "/source/img/portfolio.png",
-            "linguagens": ["Python", "SQL", "Docker", "Airflow", "Git"],
-            "categoria": "Engineering & Science"
-        },
+
+
+
+
+
         {
             "titulo": "Meu Portfólio Pessoal",
             "descricao": "Você já está aqui! Este é o meu portfólio pessoal, onde você pode conhecer um pouco sobre mim e meus projetos.",
