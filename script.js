@@ -1,6 +1,6 @@
 const cvUrls = {
-    pt: "https://drive.google.com/file/d/14-seeSUNnWrNRQqza63CEdOhgeVhBYKA/view?usp=drive_link",
-    en: "https://drive.google.com/file/d/18VeMvQ-Hd34grzaRxI7e-hIrq4e9jN4y/view?usp=sharing"
+    pt: "https://drive.google.com/file/d/1MWtFlEsGJJBWqxWIaS7QZPU7j9YYH2cH/view?usp=sharing",
+    en: "https://drive.google.com/file/d/12Sx4j5C-McgLa5kEKJVC3kKzmXdvZ8-r/view?usp=sharing"
 };
 
 // Dicionário básico de traduções (você pode expandir isso depois para o site todo)
