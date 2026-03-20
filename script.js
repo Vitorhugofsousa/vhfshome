@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
     loadSkills();
     loadSoftSkills();
-
+    loadCertificados();
 
 });
 
@@ -205,6 +205,60 @@ async function loadSoftSkills() {
         `).join('');
     } catch (error) {
         console.error('Erro ao carregar soft skills:', error);
+    }
+}
+
+// Carregando certificados
+async function loadCertificados() {
+    try {
+        const response = await fetch('/source/certificates.json');
+        const data = await response.json();
+        const container = document.getElementById('certificados-container');
+
+        if (!container) return;
+
+        const cardHTML = data.certificados.map(cert => `
+            <div class="cert-card">
+                ${cert.icone}
+                <h3>${cert.nome}</h3>
+                <p class="cert-emissor">${cert.emissor}</p>
+                <span class="cert-codigo">${cert.codigo}</span>
+            </div>
+        `).join('');
+
+        container.innerHTML = cardHTML + cardHTML;
+
+        const wrapper = container.closest('.carousel-wrapper1');
+        let animationId;
+        const speed = 1;
+
+        // Deixa o browser renderizar antes de medir
+        requestAnimationFrame(() => {
+            const halfWidth = container.scrollWidth / 2;
+            let position = 0;
+
+            function animate() {
+                position -= speed;
+
+                // Quando terminou o primeiro conjunto, volta silenciosamente ao início
+                if (position <= -halfWidth) {
+                    position = 0;
+                }
+
+                container.style.transform = `translateX(${position}px)`;
+                animationId = requestAnimationFrame(animate);
+            }
+
+            animationId = requestAnimationFrame(animate);
+
+            wrapper.addEventListener('mouseenter', () => cancelAnimationFrame(animationId));
+            wrapper.addEventListener('mouseleave', () => {
+                animationId = requestAnimationFrame(animate);
+            });
+        });
+
+    } catch (error) {
+        console.error('Erro ao carregar certificados:', error);
     }
 }
 

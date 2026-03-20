@@ -1,0 +1,46 @@
+{
+    "certificados": [
+        {
+            "nome": "Azure Fundamentals",
+            "emissor": "Microsoft",
+            "codigo": "AZ-900",
+            "icone": "<img width=\"48\" height=\"48\" src=\"https://img.icons8.com/?size=100&id=VLKafOkk3sBX&format=png&color=000000\" alt=\"azure\"/>"
+        },
+        {
+            "nome": "Scrum Fundamentals Certified",
+            "emissor": "ScrumStudy",
+            "codigo": "SFC",
+            "icone": "<img width=\"48\" height=\"48\" src=\"https://img.icons8.com/?size=100&id=xcEbLRHFJBpo&format=png&color=000000\" alt=\"scrum\"/>"
+        },
+        {
+            "nome": "Kanban Essentials Certified",
+            "emissor": "ScrumStudy",
+            "codigo": "KEC",
+            "icone": "<img width=\"48\" height=\"48\" src=\"https://img.icons8.com/?size=100&id=OQNgV2fuVH3p&format=png&color=000000\" alt=\"kanban\"/>"
+        },
+        {
+            "nome": "Databricks Fundamentals",
+            "emissor": "Databricks Academy",
+            "codigo": "Accreditation",
+            "icone": "<img width=\"48\" height=\"48\" src=\"/source/img/databricksicon.png\" alt=\"databricks\"/>"
+        },
+        {
+            "nome": "GenAI Fundamentals",
+            "emissor": "Databricks Academy",
+            "codigo": "Accreditation",
+            "icone": "<img width=\"48\" height=\"48\" src=\"/source/img/databricksicon.png\" alt=\"databricks-genai\"/>"
+        },
+        {
+            "nome": "AI Agent Fundamentals",
+            "emissor": "Databricks Academy",
+            "codigo": "Accreditation",
+            "icone": "<img width=\"48\" height=\"48\" src=\"/source/img/databricksicon.png\" alt=\"databricks-agent\"/>"
+        },
+        {
+            "nome": "English Certificate",
+            "emissor": "EFSET",
+            "codigo": "B2 Intermediate",
+            "icone": "<img width=\"48\" height=\"48\" src=\"https://img.icons8.com/color/48/great-britain.png\" alt=\"efset\"/>"
+        }
+    ]
+}

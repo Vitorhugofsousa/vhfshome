@@ -357,6 +357,48 @@ footer {
 }
 
 
+.certificados { padding: 60px 5vw; }
+
+.carousel-wrapper1 {
+    overflow: hidden;
+    width: 100%;
+    cursor: default;
+}
+
+.carousel-track1 {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    will-change: transform;
+}
+
+.cert-card {
+    min-width: 220px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.cert-card h3 { font-size: 0.9rem; }
+.cert-emissor { font-size: 0.8rem; color: var(--muted); }
+
+.cert-codigo {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    background: rgba(88,166,255,0.08);
+    border: 1px solid rgba(88,166,255,0.25);
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
 /* Timeline */
 .timeline {
     padding: 4rem 2rem;
