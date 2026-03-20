@@ -5,8 +5,8 @@
             "descricao": "Neste projeto eu apliquei técnicas de ETL para tratar, normalizar e apresentar dados de clima.",
             "github": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
             "vercel": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
-            "imagem": "/source/img/weather_project.png",
-            "linguagens": ["Python", "ETL", "Docker", "Airflow", "Terraform", "Git", "Parquet"],
+            "imagem": "/source/img/etl_weatherproject.png",
+            "linguagens": ["Python", "ETL", "Docker", "Airflow", "Terraform", "Git", "Pandas"],
             "categoria": "Engineering & Science"
         },
         {
@@ -14,15 +14,23 @@
             "descricao": "Nesse projeto desenvolvi um script Python que extrai informações relevantes de arquivos XML de Notas Fiscais Eletrônicas e as salva em uma planilha de forma automatizada.",
             "github": "https://github.com/Vitorhugofsousa/xml-extraction",
             "vercel": "https://github.com/Vitorhugofsousa/xml-extraction",
-            "imagem": "/source/img/weather_project.png",
-            "linguagens": ["Python", "Excel", "Git"],
+            "imagem": "/source/img/xmlextraction_project.png",
+            "linguagens": ["Python", "Excel", "Git", "Pandas"],
             "categoria": "Engineering & Science"
         },
 
 
 
 
-        
+        {
+            "titulo": "Weather Dashboard",
+            "descricao": "Dashboard desenvolvido utilizando Streamlit e PyPlot para mostrar métricas de clima em complemento ao projeto ETL Weather API",
+            "github": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
+            "vercel": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
+            "imagem": "/source/img/weather_projectdash.png",
+            "linguagens": ["Python", "Streamlit", "Docker", "Git", "Streamlit", "Pyplot", "Pandas"],
+            "categoria": "Dashboards & Analytics"
+        },
         {
             "titulo": "Dashboard Distribuição de Medicamentos",
             "descricao": "Neste projeto eu apliquei técnicas de visualização de dados para monitorar a distribuição de medicamentos.",
