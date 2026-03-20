@@ -259,9 +259,11 @@ async function loadProjects() {
                             <div class="carousel-track" id="track-${catId}">
                                 ${projetos.map(projeto => `
                                     <div class="projeto-card">
+                                        <div class="projeto-card-head">
                                         ${projeto.imagem ? `<img src="${projeto.imagem}" alt="${projeto.titulo}" class="projeto-imagem" style="width:100%;border-radius:8px;margin-bottom:1rem;">` : ''}
                                         <h3>${projeto.titulo}</h3>
                                         <p>${projeto.descricao}</p>
+                                        </div>
                                         <div class="projeto-linguagens">
                                             ${projeto.linguagens ? projeto.linguagens.map(lang => `
                                                 <span class="linguagem-tag">${lang}</span>

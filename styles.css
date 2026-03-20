@@ -118,7 +118,7 @@ main {
 }
 
 section {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     max-width: 75%;
     margin: 0 auto;
 }
@@ -229,6 +229,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    max-height: auto;
 }
 
 .skill-card:hover {
@@ -462,10 +463,12 @@ footer {
 }
 
 .projeto-linguagens {
-    margin: 20px 0px;
+    margin: 15px 0px;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 7%;
+    font-size: 0.8rem;
+    gap: 2%;
   }
   .linguagem-tag {
     border: 1px solid #a259f7;
@@ -476,7 +479,7 @@ footer {
     font-weight: 600;
     background: transparent;
     display: inline-block;
-    margin: 10px 0px;
+    margin: 4px 0px;
   }
 
 /* Estilos para a seção de projetos */
@@ -485,6 +488,7 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
+
 }
 
 .projeto-card {
@@ -495,6 +499,8 @@ footer {
     max-height: auto;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;    
 }
 
 .projeto-card:hover {
@@ -502,12 +508,15 @@ footer {
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
 }
 
-.projeto-card h3 {
+.projeto-card-head {
+    flex: 1;
+}
+.projeto-card-head h3 {
     color: var(--text-color);
     margin-bottom: 1rem;
 }
 
-.projeto-card p {
+.projeto-card-head p {
     color: var(--text-color);
     margin-bottom: 1rem;
 }
@@ -515,7 +524,7 @@ footer {
 .projeto-links {
     display: flex;
     gap: 1rem;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .projeto-links .btn {

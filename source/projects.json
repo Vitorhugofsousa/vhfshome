@@ -2,7 +2,7 @@
     "projetos": [
         {
             "titulo": "ETL Weather API",
-            "descricao": "Neste projeto eu apliquei técnicas de ETL para tratar e normalizar dados de clima.",
+            "descricao": "Neste projeto eu apliquei técnicas de ETL para tratar, normalizar e apresentar dados de clima.",
             "github": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
             "vercel": "https://github.com/Vitorhugofsousa/weather_DataEng.git",
             "imagem": "/source/img/weather_project.png",
